@@ -1,8 +1,17 @@
-# interactions-dbl
+<div align="center">
+    <h1>interactions-dbl<h1>
+    <img alt="PyPI" src="https://img.shields.io/pypi/v/interactions-dbl?color=4c7fbd&label=version&logoColor=33364b&style=flat-square">
+    <img alt="PyPI - Status" src="https://img.shields.io/pypi/status/interactions-dbl?color=4c7fbd&logoColor=33364b&style=flat-square">
+    <img alt="PyPI - License" src="https://img.shields.io/pypi/l/interactions-dbl?color=4c7fbd&logoColor=33364b&style=flat-square">
+</div>
+
+---
 
 DBL (Discord Bot Lists) extension library for discord-py-interactions.
 
 Find the supported bot listings [here](https://botblock.org/lists).
+
+---
 
 ## Features
 
@@ -15,6 +24,8 @@ Find the supported bot listings [here](https://botblock.org/lists).
 ```Shell
 pip install interactions-dbl
 ```
+
+---
 
 ## Examples
 
