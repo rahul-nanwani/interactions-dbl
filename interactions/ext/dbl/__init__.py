@@ -22,7 +22,7 @@
 
 from interactions.base import __version__ as __lib_version__
 
-__version__ = "1.0.b1"
+__version__ = "1.0.b2"
 __ext_version__ = f"{__lib_version__}:{__version__}"
 
 from .exceptions import *  # noqa: F401 F403
