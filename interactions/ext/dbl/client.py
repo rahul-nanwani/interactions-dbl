@@ -28,9 +28,7 @@ from interactions import Client, Snowflake
 
 from .exceptions import *
 
-__all__ = (
-    'DBLClient'
-)
+__all__ = ('DBLClient', )
 
 
 class DBLClient:
@@ -57,6 +55,9 @@ class DBLClient:
         if kwargs.get('auto_post', True):
             # start auto post loop
             get_event_loop().create_task(self.__loop(self.interval))
+    
+    def __str__(self):
+        return f"{self.bot.me.name}"
 
     def __session_init(self):
         """
