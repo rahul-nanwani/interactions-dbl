@@ -39,7 +39,7 @@ if __name__ == '__main__':
             "top.gg": TOPGG_TOKEN,
             "discordbotlist.com": DBL_TOKEN
         }
-        DBLClient(bot, auth=auth)
+        DBLClient(bot=bot, auth=auth)
 
 
     bot.start()
@@ -62,7 +62,7 @@ class UpdateCount(interactions.Extension):
             "top.gg": TOPGG_TOKEN,
             "discordbotlist.com": DBL_TOKEN
         }
-        DBLClient(self.bot, auth=auth)
+        DBLClient(bot=self.bot, auth=auth)
 
 
 def setup(client):
