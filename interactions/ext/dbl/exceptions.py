@@ -20,7 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+"""DBL Exceptions Module"""
+
 __all__ = (
+    'DBLException',
     'EmptyResponse',
     'RateLimited',
     'RequestFailure'
@@ -28,24 +31,39 @@ __all__ = (
 
 
 class DBLException(Exception):
+    """DBL exception base class"""
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args)
 
 
 class RequestFailure(DBLException):
+    """API Request Failure
+
+    :param status: (int) API response status code
+    :param response: (str) API response message
+    """
+
     def __init__(self, status: int, response: str):
         super().__init__(f"{status}: {response}")
 
 
 class RateLimited(DBLException):
-    def __init__(self, json=None):
+    """API Rate Limited
+
+    :param json: (dict) API response
+    """
+
+    def __init__(self, json: dict):
         super().__init__(
-            "The request to the API endpoint was rate-limited." +
-            f"\nPlease re-attempt this request after {round(json['retry_after'], 2):,} seconds."
-            if json and "retry_after" in json else ""
+            f"The request to the API endpoint was rate-limited. \n"
+            f"Please re-attempt this request after {round(json.get('retry_after', 0), 2):,} seconds."
+            if "retry_after" in json else ""
         )
 
 
 class EmptyResponse(DBLException):
+    """API No/Empty Response"""
+
     def __init__(self):
         super().__init__("No response was received from the API")

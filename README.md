@@ -1,17 +1,14 @@
 <div align="center">
-    <h1>interactions-dbl<h1>
-    <img alt="PyPI" src="https://img.shields.io/pypi/v/interactions-dbl?color=4c7fbd&label=version&logoColor=33364b&style=flat-square">
-    <img alt="PyPI - Status" src="https://img.shields.io/pypi/status/interactions-dbl?color=4c7fbd&logoColor=33364b&style=flat-square">
-    <img alt="PyPI - License" src="https://img.shields.io/pypi/l/interactions-dbl?color=4c7fbd&logoColor=33364b&style=flat-square">
+    <h1>interactions-dbl</h1>
+    <img alt="PyPI" src="https://img.shields.io/pypi/v/interactions-dbl?&label=version&style=flat-square">
+    <img alt="PyPI - Status" src="https://img.shields.io/pypi/status/interactions-dbl?style=flat-square">
+    <img alt="PyPI - License" src="https://img.shields.io/pypi/l/interactions-dbl?style=flat-square">
+    <hr>
 </div>
-
----
 
 DBL (Discord Bot Lists) extension library for discord-py-interactions.
 
 Find the supported bot listings [here](https://botblock.org/lists).
-
----
 
 ## Features
 
@@ -24,8 +21,6 @@ Find the supported bot listings [here](https://botblock.org/lists).
 ```Shell
 pip install interactions-dbl
 ```
-
----
 
 ## Examples
 
@@ -50,7 +45,7 @@ if __name__ == '__main__':
             "top.gg": TOPGG_TOKEN,
             "discordbotlist.com": DBL_TOKEN
         }
-        DBLClient(bot=bot, auth=auth)
+        DBLClient(bot, auth=auth)
 
 
     bot.start()
@@ -73,7 +68,7 @@ class UpdateCount(interactions.Extension):
             "top.gg": TOPGG_TOKEN,
             "discordbotlist.com": DBL_TOKEN
         }
-        DBLClient(bot=self.bot, auth=auth)
+        DBLClient(self.bot, auth=auth)
 
 
 def setup(client):
