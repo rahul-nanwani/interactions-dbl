@@ -20,10 +20,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+"""interactions-dbl v1.0.0
+
+Documentation: https://github.com/rahul-nanwani/interactions-dbl/wiki
+Author: Rahul Nanwani
+License: MIT
+"""
+
 from interactions.base import __version__ as __lib_version__
 
-__version__ = "1.0.b2"
+__version__ = "1.0.0"
 __ext_version__ = f"{__lib_version__}:{__version__}"
 
+__title__ = "interactions-dbl"
+__author__ = "Rahul Nanwani"
+__license__ = "MIT License"
+
 from .exceptions import *  # noqa: F401 F403
-from .client import DBLClient  # noqa: F401 F403
+from .client import *  # noqa: F401 F403
